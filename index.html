@@ -3,78 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Font Styles Example</title>
+    <title>Pricing Plan</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        /* Apply a general font style */
+        /* CSS Variables for Theme */
+        :root {
+            --primary-color: #FF5722;
+            --text-dark: #333;
+            --text-light: #777;
+            --background-light: #fff;
+            --background-dark: #f7f7f7;
+            --button-hover: #E64A19;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f7f7f7, #e3e3e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        /* Heading with different font size and weight */
-        .heading {
-            font-size: 36px;
-            font-weight: bold;
-            font-family: 'Georgia', serif;
+        .pricing-card {
+            background: var(--background-light);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            position: relative;
         }
 
-        /* Intro paragraph with a lighter font */
-        .intro {
-            font-size: 18px;
-            font-style: italic;
-            font-family: 'Times New Roman', serif;
-        }
-
-        /* Subheading with custom font */
-        .subheading {
-            font-size: 28px;
-            font-weight: 600;
-            font-family: 'Verdana', sans-serif;
-        }
-
-        /* Different text styles */
-        .serif-text {
-            font-family: 'Times New Roman', serif;
-            font-size: 16px;
-        }
-
-        .sans-serif-text {
-            font-family: 'Arial', sans-serif;
-            font-size: 16px;
-        }
-
-        .italic-text {
-            font-style: italic;
-            font-size: 16px;
-        }
-
-        .bold-text {
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .large-text {
-            font-size: 24px;
-        }
-
-        .small-text {
+        .pricing-card::before {
+            content: "No Setup Fee or Binding Contracts";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
             font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .description {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: var(--button-hover);
+        }
+
+        .features {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .features h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            font-size: 14px;
+            color: var(--text-dark);
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: "✔";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Notification Badge */
+        .notification {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            padding: 5px 8px;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
 
-    <h1 class="heading">Welcome to My Webpage</h1>
-    <p class="intro">This is an example of applying different font styles and sizes using CSS3.</p>
+    <div class="pricing-card">
+        <div class="notification">1</div>
+        <h2>Full/Pro Plan</h2>
+        <p class="price">$99/month</p>
+        <p class="description">Become a culinary sensation with our Full Plan at just $99/month.</p>
+        <button class="btn">Get Started</button>
 
-    <h2 class="subheading">Font Variations</h2>
-    <p class="serif-text">This is a paragraph with a serif font.</p>
-    <p class="sans-serif-text">This is a paragraph with a sans-serif font.</p>
-    <p class="italic-text">This text is italicized.</p>
-    <p class="bold-text">This text is bold.</p>
-    <p class="large-text">This text has a larger font size.</p>
-    <p class="small-text">This text has a smaller font size.</p>
+        <div class="features">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Digital Smart Menu</li>
+                <li>Loyalty Program</li>
+                <li>Business Analytics</li>
+                <li>Website Builder</li>
+                <li>Integrated Payment Options</li>
+                <li>Delivery System Setup</li>
+                <li>Marketing Tools</li>
+            </ul>
+        </div>
+    </div>
 
 </body>
 </html>
