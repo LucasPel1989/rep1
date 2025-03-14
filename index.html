@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desktop Design with Overlays</title>
+  <title>OTP Confirmation</title>
   <style>
     /* Reset margins and paddings for a clean layout */
     * {
@@ -15,7 +15,9 @@
     /* Full page layout */
     body, html {
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
     }
 
     /* Container to hold the left section */
@@ -24,13 +26,13 @@
       justify-content: flex-start;
       align-items: center;
       height: 100vh;
-      background-color: #f4f4f4;
+      background-color: #f8f8f8;
     }
 
     /* Left Section */
     .left-section {
       position: relative;
-      width: 50%; /* Adjust this based on your design */
+      width: 50%;
       height: 100%;
     }
 
@@ -41,25 +43,25 @@
       object-fit: cover;
     }
 
-    /* Overlay 1 */
+    /* Overlay 1 (Orange Background with transparency) */
     .overlay-1 {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Transparent black */
+      background: rgba(255, 105, 0, 0.7); /* Orange overlay */
       z-index: 1;
     }
 
-    /* Overlay 2 */
+    /* Overlay 2 (Slightly lighter white/transparent overlay) */
     .overlay-2 {
       position: absolute;
       top: 20%;
       left: 20%;
       width: 60%;
       height: 60%;
-      background: rgba(255, 255, 255, 0.4); /* Transparent white */
+      background: rgba(255, 255, 255, 0.6); /* Slight transparent white */
       z-index: 2;
     }
 
@@ -68,18 +70,59 @@
       position: absolute;
       top: 30%;
       left: 30%;
-      color: white; /* Text color */
+      color: white;
       z-index: 3;
+      text-align: center;
     }
 
     /* Heading and Paragraph styles */
     .content h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .content p {
       font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    /* OTP Input Form */
+    .otp-form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .otp-input {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      text-align: center;
+      border: 2px solid #ff6f00;
+      border-radius: 8px;
+      outline: none;
+      background-color: transparent;
+      color: #ff6f00;
+    }
+
+    .otp-input:focus {
+      border-color: #ff9e1b;
+    }
+
+    .btn-submit {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff6f00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-submit:hover {
+      background-color: #ff9e1b;
     }
 
   </style>
@@ -97,8 +140,19 @@
       <img src="https://via.placeholder.com/1200x800" alt="Background Image" class="background-image">
       <!-- Content inside the left section -->
       <div class="content">
-        <h1>Welcome to My Design</h1>
-        <p>This is a simple layout with two overlays on top of the background image.</p>
+        <h1>Enter Your OTP</h1>
+        <p>We have sent a one-time password to your registered phone number.</p>
+        
+        <!-- OTP Form -->
+        <div class="otp-form">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+          <input type="text" class="otp-input" maxlength="1">
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn-submit">Submit</button>
       </div>
     </div>
   </div>
