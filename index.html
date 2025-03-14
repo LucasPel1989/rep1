@@ -3,110 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background: #f8f1ee;
+        }
+        .container {
+            display: flex;
+            width: 900px;
+            height: 500px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .left-section {
+            flex: 1;
+            background: url('https://source.unsplash.com/500x500/?delivery') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+        }
+        .left-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .left-section h2, .left-section p {
+            position: relative;
+            z-index: 2;
+        }
+        .right-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            background: linear-gradient(to right, #fff, #fae1dd);
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        .input-group {
+            margin: 15px 0;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: black;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .login-btn:hover {
+            background: #333;
+        }
+    </style>
 </head>
 <body>
-
-<!-- Task 1: Simple title and heading -->
-<h1>Lucas Webpage</h1>
-
-<!-- Task 2: Multiple headings -->
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-<h4>This is Heading 4</h4>
-<h5>This is Heading 5</h5>
-<h6>This is Heading 6</h6>
-
-<!-- Task 3: Paragraph with a hyperlink -->
-<p>This is a paragraph with a <a href="https://www.gmail.com" target="_blank">Gmail</a> inside it.</p>
-
-<!-- Task 4: Image with alt text -->
-<img src="https://m.media-amazon.com/images/I/71V3jec+jgL._AC_SX300_SY300_.jpg"San Diego, California" title="San Diego, California">
-
-
-<!-- Task 5: Multiple sections using div -->
-<div id="The_Beach_1">
-    <h2>The Beach 1</h2>
-    <p>The Town 1.</p>
-</div>
-
-<div id="The_Beach_2">
-    <h2>The Beach 2</h2>
-    <p>The Town 2.</p>
-</div>
-
-<!-- Task 6: Navigation bar -->
-<nav>
-    <ul>
-        <li><a href="#The_Beach_1">Beach 1</a></li>
-        <li><a href="#The_Beach_2">Beach 2</a></li>
-    </ul>
-</nav>
-
-
-<!-- Task 7: Simple profile page -->
-<h2>Profile</h2>
-<img src="https://i5.walmartimages.com/seo/EastSmooth-Coastal-Beach-Picture-Wall-Art-Beach-Theme-Window-Canvas-Art-Prints-Seascape-Artwork-Small-Size-for-Bathroom_b301548e-41f5-4f76-a301-575b3c41232c.978b321820ce37a5e8a323df629d795b.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF">
-<p>This is a simple profile paragraph.</p>
-
-<!-- Task 8: External link opening in new tab -->
-<a href="https://www.google.com" target="_blank">Google</a>
-
-<!-- Task 9: Comment inside HTML -->
-<!-- This is the main section of the webpage -->
-
-<!-- Task 10: Formatting text -->
-<p>This is a <b>bold</b> text, <i>italic</i> text, and <u>underlined</u> text.</p>
-
-<!-- Task 11: Line breaks and horizontal rules -->
-<p>Text above the horizontal rule.</p>
-<hr>
-<p>Text below the horizontal rule.</p>
-
-<!-- Task 12: Emphasis using strong and em -->
-<p>This is <strong>strong</strong> and <em>emphasized</em> text.</p>
-
-<!-- Task 13: Nested elements inside a div -->
-<div>
-    <h3>Nested Elements</h3>
-    <p>This paragraph is inside a div container.</p>
-</div>
-
-<!-- Task 14: Button linking to a section -->
-<button onclick="document.getElementById('The_Beach_2').scrollIntoView();">Go to Section 2</button>
-
-<!-- Task 15: Ordered and unordered list -->
-<h2>Favorite Books</h2>
-<ol>
-    <li>Book 1</li>
-    <li>Book 2</li>
-    <li>Book 3</li>
-</ol>
-
-<ul>
-    <li>Book A</li>
-    <li>Book B</li>
-    <li>Book C</li>
-</ul>
-
-<!-- Task 16: Email link -->
-<a href="mailto:yourname@live.com">Email Me</a>
-
-<!-- Task 17: Basic structure for a blog post -->
-<h2>Blog Post Title</h2>
-<p>This is the content of the blog post.</p>
-
-<!-- Task 18: Test different heading sizes -->
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-
-<!-- Task 19: Blockquote -->
-<blockquote>
-    "This is a quoted text."
-    <footer>- Author</footer>
-</blockquote>
-
+    <div class="container">
+        <div class="left-section">
+            <h2>Service Panel</h2>
+            <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly.</p>
+        </div>
+        <div class="right-section">
+            <h2>Welcome Back</h2>
+            <p>Manage, streamline, and thrive effortlessly.</p>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="samsmith@gmail.com">
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <div class="actions">
+                <input type="checkbox"> Remember me
+                <a href="#">Login with Code</a>
+            </div>
+            <button class="login-btn">Sign In</button>
+        </div>
+    </div>
 </body>
 </html>
