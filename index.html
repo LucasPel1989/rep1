@@ -3,85 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Pricing Section</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <title>Pricing Card with Popup</title>
     <style>
-        /* CSS Variables for Theme */
-        :root {
-            --primary-color: #FF5722;
-            --secondary-color: #FF7043;
-            --text-dark: #333;
-            --text-light: #777;
-            --background-light: #fff;
-            --background-dark: #f7f7f7;
-            --button-hover: #E64A19;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #f7f7f7, #e3e3e3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .pricing-card {
-            background: var(--background-light);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
             text-align: center;
-            max-width: 400px;
-            position: relative;
-            border: 4px solid var(--primary-color);
-            box-sizing: border-box;
+            margin: 50px;
         }
 
-        .pricing-card::before {
-            content: "No Setup Fee or Binding Contracts";
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary-color);
-            color: white;
-            font-size: 12px;
-            padding: 5px 10px;
-            border-radius: 15px;
+        .card {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .price {
-            font-size: 32px;
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .description {
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 10px;
-        }
-
-        .btn {
-            background: var(--primary-color);
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: background 0.3s ease-in-out, transform 0.2s;
-        }
-
-        .btn:hover {
-            background: var(--button-hover);
-            transform: scale(1.05);
+            font-size: 28px;
+            font-weight: bold;
+            margin: 10px 0;
         }
 
         .features {
@@ -89,83 +32,81 @@
             margin-top: 20px;
         }
 
-        .features h3 {
-            font-size: 18px;
-            font-weight: 600;
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 5px;
-        }
-
-        .features ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .features li {
+        .features p {
             font-size: 14px;
-            color: var(--text-dark);
-            padding: 8px 0;
-            display: flex;
-            align-items: center;
+            margin: 5px 0;
         }
 
-        .features li::before {
-            content: "✔";
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
-        /* Box Model Adjustments */
-        .box-example {
-            border: 3px solid var(--secondary-color);
-            padding: 15px;
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
             margin-top: 20px;
-            text-align: center;
-            border-radius: 10px;
-            background: rgba(255, 87, 34, 0.1);
         }
 
-        /* Notification Badge */
-        .notification {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+        .button:hover {
+            background-color: #e64a19;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            margin-top: 10px;
+            padding: 5px 10px;
             background: red;
             color: white;
-            font-size: 12px;
-            padding: 5px 8px;
-            border-radius: 50%;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div class="pricing-card">
-        <div class="notification">1</div>
-        <h2>Full/Pro Plan</h2>
+    <div class="card">
+        <h3>Full/Pro Plan</h3>
         <p class="price">$99/month</p>
-        <p class="description">Become a culinary sensation with our Full Plan at just $99/month.</p>
-        <button class="btn">Get Started</button>
-
+        <p>Become a culinary sensation with our plan.</p>
         <div class="features">
-            <h3>Key Features:</h3>
-            <ul>
-                <li>Digital Smart Menu</li>
-                <li>Loyalty Program</li>
-                <li>Business Analytics</li>
-                <li>Website Builder</li>
-                <li>Integrated Payment Options</li>
-                <li>Delivery System Setup</li>
-                <li>Marketing Tools</li>
-            </ul>
+            <p>✔ Digital Smart Menu</p>
+            <p>✔ Loyalty Program</p>
+            <p>✔ Business Analytics</p>
+            <p>✔ Website Builder</p>
         </div>
-
-        <div class="box-example">
-            Box Model Example: Borders, Padding, and Margin
-        </div>
+        <button class="button" onclick="showPopup()">Get Started</button>
     </div>
+
+    <div class="popup" id="popup">
+        <p>Thank you for choosing our plan!</p>
+        <button class="close" onclick="hidePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
