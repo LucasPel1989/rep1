@@ -3,110 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Styled Pricing Section</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for Theme */
+        :root {
+            --primary-color: #FF5722;
+            --secondary-color: #FF7043;
+            --text-dark: #333;
+            --text-light: #777;
+            --background-light: #fff;
+            --background-dark: #f7f7f7;
+            --button-hover: #E64A19;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f7f7f7, #e3e3e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .pricing-card {
+            background: var(--background-light);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            position: relative;
+            border: 4px solid var(--primary-color);
+            box-sizing: border-box;
+        }
+
+        .pricing-card::before {
+            content: "No Setup Fee or Binding Contracts";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .description {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--button-hover);
+            transform: scale(1.05);
+        }
+
+        .features {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .features h3 {
+            font-size: 18px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features li {
+            font-size: 14px;
+            color: var(--text-dark);
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: "✔";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Box Model Adjustments */
+        .box-example {
+            border: 3px solid var(--secondary-color);
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 10px;
+            background: rgba(255, 87, 34, 0.1);
+        }
+
+        /* Notification Badge */
+        .notification {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            font-size: 12px;
+            padding: 5px 8px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Task 1: Simple title and heading -->
-<h1>Lucas Webpage</h1>
+    <div class="pricing-card">
+        <div class="notification">1</div>
+        <h2>Full/Pro Plan</h2>
+        <p class="price">$99/month</p>
+        <p class="description">Become a culinary sensation with our Full Plan at just $99/month.</p>
+        <button class="btn">Get Started</button>
 
-<!-- Task 2: Multiple headings -->
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-<h4>This is Heading 4</h4>
-<h5>This is Heading 5</h5>
-<h6>This is Heading 6</h6>
+        <div class="features">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Digital Smart Menu</li>
+                <li>Loyalty Program</li>
+                <li>Business Analytics</li>
+                <li>Website Builder</li>
+                <li>Integrated Payment Options</li>
+                <li>Delivery System Setup</li>
+                <li>Marketing Tools</li>
+            </ul>
+        </div>
 
-<!-- Task 3: Paragraph with a hyperlink -->
-<p>This is a paragraph with a <a href="https://www.gmail.com" target="_blank">Gmail</a> inside it.</p>
-
-<!-- Task 4: Image with alt text -->
-<img src="https://m.media-amazon.com/images/I/71V3jec+jgL._AC_SX300_SY300_.jpg"San Diego, California" title="San Diego, California">
-
-
-<!-- Task 5: Multiple sections using div -->
-<div id="The_Beach_1">
-    <h2>The Beach 1</h2>
-    <p>The Town 1.</p>
-</div>
-
-<div id="The_Beach_2">
-    <h2>The Beach 2</h2>
-    <p>The Town 2.</p>
-</div>
-
-<!-- Task 6: Navigation bar -->
-<nav>
-    <ul>
-        <li><a href="#The_Beach_1">Beach 1</a></li>
-        <li><a href="#The_Beach_2">Beach 2</a></li>
-    </ul>
-</nav>
-
-
-<!-- Task 7: Simple profile page -->
-<h2>Profile</h2>
-<img src="https://i5.walmartimages.com/seo/EastSmooth-Coastal-Beach-Picture-Wall-Art-Beach-Theme-Window-Canvas-Art-Prints-Seascape-Artwork-Small-Size-for-Bathroom_b301548e-41f5-4f76-a301-575b3c41232c.978b321820ce37a5e8a323df629d795b.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF">
-<p>This is a simple profile paragraph.</p>
-
-<!-- Task 8: External link opening in new tab -->
-<a href="https://www.google.com" target="_blank">Google</a>
-
-<!-- Task 9: Comment inside HTML -->
-<!-- This is the main section of the webpage -->
-
-<!-- Task 10: Formatting text -->
-<p>This is a <b>bold</b> text, <i>italic</i> text, and <u>underlined</u> text.</p>
-
-<!-- Task 11: Line breaks and horizontal rules -->
-<p>Text above the horizontal rule.</p>
-<hr>
-<p>Text below the horizontal rule.</p>
-
-<!-- Task 12: Emphasis using strong and em -->
-<p>This is <strong>strong</strong> and <em>emphasized</em> text.</p>
-
-<!-- Task 13: Nested elements inside a div -->
-<div>
-    <h3>Nested Elements</h3>
-    <p>This paragraph is inside a div container.</p>
-</div>
-
-<!-- Task 14: Button linking to a section -->
-<button onclick="document.getElementById('The_Beach_2').scrollIntoView();">Go to Section 2</button>
-
-<!-- Task 15: Ordered and unordered list -->
-<h2>Favorite Books</h2>
-<ol>
-    <li>Book 1</li>
-    <li>Book 2</li>
-    <li>Book 3</li>
-</ol>
-
-<ul>
-    <li>Book A</li>
-    <li>Book B</li>
-    <li>Book C</li>
-</ul>
-
-<!-- Task 16: Email link -->
-<a href="mailto:yourname@live.com">Email Me</a>
-
-<!-- Task 17: Basic structure for a blog post -->
-<h2>Blog Post Title</h2>
-<p>This is the content of the blog post.</p>
-
-<!-- Task 18: Test different heading sizes -->
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-
-<!-- Task 19: Blockquote -->
-<blockquote>
-    "This is a quoted text."
-    <footer>- Author</footer>
-</blockquote>
+        <div class="box-example">
+            Box Model Example: Borders, Padding, and Margin
+        </div>
+    </div>
 
 </body>
 </html>
