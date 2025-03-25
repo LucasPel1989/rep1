@@ -5,152 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f8f8f8;
-        }
-        .container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
-        .left-section {
-    width: 40%;
-    background: url('otpconf.jpeg') no-repeat center center;
-    background-size: cover;
-    border-radius: 15px 0 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-        .left-section img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 102, 0, 0.4);
-        }
-        .text-content {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: white;
-        }
-        .text-content h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .text-content p {
-            font-size: 14px;
-            max-width: 80%;
-        }
-        .right-section {
-    width: 60%;
-    background: #fdeeea;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-}
-        .login-box {
-            width: 80%;
-            text-align: center;
-        }
-        .login-box h2 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .login-box p {
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-        .login-box input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .password-container {
-            position: relative;
-        }
-        .password-container .eye-icon {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
-        .options {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin-bottom: 20px;
-        }
-        .options a {
-            text-decoration: none;
-            color: orange;
-        }
-        .login-box button {
-            width: 100%;
-            padding: 10px;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="left-section">
-            <img src="otpconf.jpeg" alt="Background Image">
-            <div class="overlay"></div>
-            <div class="text-content">
-                <h1>Service Panel</h1>
-                <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+            <div class="overlay">
+                <img src="orderific-logo.png" class="logo" alt="Orderific Logo">
+                <h1 class="title">Service Panel</h1>
+                <p class="description">
+                    Streamline your restaurant operations with BMS. Manage reservations, orders, 
+                    inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.
+                </p>
             </div>
         </div>
         <div class="right-section">
-            <div class="login-box">
-                <h2>Welcome Back</h2>
-                <p>Manage, streamline, and thrive effortlessly.</p>
-                <form>
-                    <label>Email</label>
-                    <input type="email" placeholder="samanth@gmail.com" required>
-                    <label>Password</label>
-                    <div class="password-container">
-                        <input type="password" placeholder="********" required>
-                        <span class="eye-icon">&#128065;</span>
-                    </div>
-                    <div class="options">
-                        <input type="checkbox" id="remember">
-                        <label for="remember">Remember me</label>
-                        <a href="#">Login with Code</a>
-                    </div>
-                    <button type="submit">Sign in</button>
-                </form>
-            </div>
+            <h2 class="welcome">Welcome Back</h2>
+            <p class="subtext">Manage, streamline, and thrive effortlessly.</p>
+            <form>
+                <label>Email</label>
+                <input type="email" placeholder="Enter email address">
+                
+                <label>Password</label>
+                <div class="password-field">
+                    <input type="password" placeholder="Password">
+                    <span class="eye-icon">👁️</span>
+                </div>
+
+                <div class="options">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                    <a href="#">Login with Code</a>
+                </div>
+
+                <button type="submit" class="sign-in">Sign In</button>
+            </form>
         </div>
     </div>
 </body>
