@@ -1,126 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orderific Service Panel</title>
-  <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Full Page Layout */
-    body, html {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f4f4f4;
-    }
-
-    /* Main Container */
-    .container {
-      width: 400px; /* Adjust based on need */
-      height: 650px;
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Background Image */
-    .background-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    /* First Overlay - Orange Transparent */
-    .overlay-1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 105, 0, 0.6); /* Orange Transparency */
-      z-index: 1;
-    }
-
-    /* Second Overlay - Gradient Effect */
-    .overlay-2 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40%;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-      z-index: 2;
-    }
-
-    /* Content Box */
-    .content {
-      position: absolute;
-      bottom: 30px;
-      left: 20px;
-      color: white;
-      z-index: 3;
-    }
-
-    /* Logo */
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      z-index: 3;
-    }
-
-    .logo img {
-      width: 100px;
-    }
-
-    /* Title */
-    .content h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    /* Description */
-    .content p {
-      font-size: 14px;
-      line-height: 1.4;
-      max-width: 90%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f8f8f8;
+        }
+        .container {
+            display: flex;
+            width: 900px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-section {
+            position: relative;
+            width: 50%;
+        }
+        .left-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 102, 0, 0.4);
+        }
+        .text-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+        }
+        .text-content h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .text-content p {
+            font-size: 14px;
+            max-width: 80%;
+        }
+        .right-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f8f8;
+        }
+        .login-box {
+            width: 80%;
+            text-align: center;
+        }
+        .login-box h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .login-box p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .password-container {
+            position: relative;
+        }
+        .password-container .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .options a {
+            text-decoration: none;
+            color: orange;
+        }
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="container">
-    <!-- Background Image -->
-    <img src="otpconf.jpeg" alt="Orderific Delivery" class="background-image">
-
-    <!-- Overlays -->
-    <div class="overlay-1"></div>
-    <div class="overlay-2"></div>
-
-    <!-- Logo -->
-    <div class="logo">
-      <img src="your-logo-url.png" alt="Orderific Logo">
+    <div class="container">
+        <div class="left-section">
+            <img src="otpconf.jpg" alt="Background Image">
+            <div class="overlay"></div>
+            <div class="text-content">
+                <h1>Service Panel</h1>
+                <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="login-box">
+                <h2>Welcome Back</h2>
+                <p>Manage, streamline, and thrive effortlessly.</p>
+                <form>
+                    <label>Email</label>
+                    <input type="email" placeholder="samanth@gmail.com" required>
+                    <label>Password</label>
+                    <div class="password-container">
+                        <input type="password" placeholder="********" required>
+                        <span class="eye-icon">&#128065;</span>
+                    </div>
+                    <div class="options">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                        <a href="#">Login with Code</a>
+                    </div>
+                    <button type="submit">Sign in</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-    <!-- Content -->
-    <div class="content">
-      <h1>Service Panel</h1>
-      <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly and focus on delivering exceptional dining experiences.</p>
-    </div>
-  </div>
-
 </body>
 </html>
