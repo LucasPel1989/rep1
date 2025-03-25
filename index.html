@@ -3,37 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OTP Confirmation</title>
+  <title>Orderific Service Panel</title>
   <style>
-    /* Reset margins and paddings for a clean layout */
+    /* General Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    /* Full page layout */
+    /* Full Page Layout */
     body, html {
-      height: 100%;
-      font-family: 'Arial', sans-serif;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-
-    /* Container to hold the left section */
-    .container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
       height: 100vh;
-      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
     }
 
-    /* Left Section */
-    .left-section {
+    /* Main Container */
+    .container {
+      width: 400px; /* Adjust based on need */
+      height: 650px;
       position: relative;
-      width: 50%;
-      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     /* Background Image */
@@ -41,123 +37,90 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
-    /* Overlay 1 (Orange Background with transparency) */
+    /* First Overlay - Orange Transparent */
     .overlay-1 {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 105, 0, 0.7); /* Orange overlay */
+      background: rgba(255, 105, 0, 0.6); /* Orange Transparency */
       z-index: 1;
     }
 
-    /* Overlay 2 (Slightly lighter white/transparent overlay) */
+    /* Second Overlay - Gradient Effect */
     .overlay-2 {
       position: absolute;
-      top: 20%;
-      left: 20%;
-      width: 60%;
-      height: 60%;
-      background: rgba(255, 255, 255, 0.6); /* Slight transparent white */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
       z-index: 2;
     }
 
-    /* Content inside the section */
+    /* Content Box */
     .content {
       position: absolute;
-      top: 30%;
-      left: 30%;
+      bottom: 30px;
+      left: 20px;
       color: white;
       z-index: 3;
-      text-align: center;
     }
 
-    /* Heading and Paragraph styles */
+    /* Logo */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    /* Title */
     .content h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
+    /* Description */
     .content p {
-      font-size: 1.25rem;
-      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 1.4;
+      max-width: 90%;
     }
-
-    /* OTP Input Form */
-    .otp-form {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .otp-input {
-      width: 50px;
-      height: 50px;
-      font-size: 1.5rem;
-      text-align: center;
-      border: 2px solid #ff6f00;
-      border-radius: 8px;
-      outline: none;
-      background-color: transparent;
-      color: #ff6f00;
-    }
-
-    .otp-input:focus {
-      border-color: #ff9e1b;
-    }
-
-    .btn-submit {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ff6f00;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .btn-submit:hover {
-      background-color: #ff9e1b;
-    }
-
   </style>
 </head>
 <body>
-  <!-- Main container -->
-  <div class="container">
-    <!-- Left Section with Overlays -->
-    <div class="left-section">
-      <!-- Overlay 1 -->
-      <div class="overlay overlay-1"></div>
-      <!-- Overlay 2 -->
-      <div class="overlay overlay-2"></div>
-      <!-- Background Image -->
-      <img src="https://via.placeholder.com/1200x800" alt="Background Image" class="background-image">
-      <!-- Content inside the left section -->
-      <div class="content">
-        <h1>Enter Your OTP</h1>
-        <p>We have sent a one-time password to your registered phone number.</p>
-        
-        <!-- OTP Form -->
-        <div class="otp-form">
-          <input type="text" class="otp-input" maxlength="1">
-          <input type="text" class="otp-input" maxlength="1">
-          <input type="text" class="otp-input" maxlength="1">
-          <input type="text" class="otp-input" maxlength="1">
-        </div>
 
-        <!-- Submit Button -->
-        <button class="btn-submit">Submit</button>
-      </div>
+  <div class="container">
+    <!-- Background Image -->
+    <img src="your-image-url.jpg" alt="Orderific Delivery" class="background-image">
+
+    <!-- Overlays -->
+    <div class="overlay-1"></div>
+    <div class="overlay-2"></div>
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="your-logo-url.png" alt="Orderific Logo">
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h1>Service Panel</h1>
+      <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly and focus on delivering exceptional dining experiences.</p>
     </div>
   </div>
+
 </body>
 </html>
-
-
-
