@@ -26,7 +26,7 @@ body {
 /* Left Section */
 .left-section {
     width: 40%;
-    background: url('otpconf.jpg') no-repeat center center;
+    background: url('otpconf.jpeg') no-repeat center center;
     background-size: cover;
     position: relative;
 }
