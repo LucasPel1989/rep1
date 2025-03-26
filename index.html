@@ -1,95 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-        }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+}
 
-        .container {
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .input-field {
-            width: 90%;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 30px;
-            border: none;
-            outline: none;
-            font-size: 16px;
-        }
+.left-section {
+    flex: 1;
+    background: url('otpconf.jpg') center/cover no-repeat;
+}
 
-        .password-container {
-            position: relative;
-            width: 90%;
-        }
+.right-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-        .password-container input {
-            width: 100%;
-            padding-right: 40px;
-        }
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-        .eye-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-        }
+p {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
 
-        .button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            background: white;
-            color: black;
-            border-radius: 30px;
-            cursor: pointer;
-        }
+form {
+    display: flex;
+    flex-direction: column;
+}
 
-        @media (min-width: 768px) {
-            body {
-                background-color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .container {
-                background: white;
-                padding: 40px;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <input type="email" class="input-field" placeholder="samsmith@gmail.com">
-        <div class="password-container">
-            <input type="password" class="input-field" placeholder="Password">
-            <span class="eye-icon">👁️</span>
-        </div>
-        <button class="button">Sign In</button>
-    </div>
-</body>
-</html>
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.password-field {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+    }
+    .left-section {
+        height: 40vh;
+    }
+    .right-section {
+        height: 60vh;
+        padding: 20px;
+    }
+}
