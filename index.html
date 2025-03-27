@@ -1,103 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Login</title>
+    <title>Orderific Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body, html { width: 100%; height: 100%; }
 
-        body, html {
-            width: 100%;
-            height: 100%;
-            background: #fff;
+        .container {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100vh;
+            width: 100%;
         }
 
-        .login-section {
-            width: 90%;
-            max-width: 400px;
-            padding: 30px;
-            background: #fff;
+        .left-section {
+            flex: 1;
+            background: url("otpconf.jpg") no-repeat center/cover;
+            position: relative;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+            padding: 30px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
         }
 
-        .login-section h2 {
+        .left-section img {
+            width: 120px;
+        }
+
+        .left-section .text {
+            color: white;
+        }
+
+        .left-section h2 {
+            font-size: 30px;
+            font-weight: 700;
             margin-bottom: 10px;
-            font-size: 24px;
-            font-weight: bold;
         }
 
-        .login-section p {
+        .left-section p {
+            font-size: 14px;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .right-section {
+            flex: 1;
+            background: #f8f4f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .form-box {
+            width: 80%;
+            max-width: 320px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .subtext {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
             margin-bottom: 20px;
-            color: #666;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            outline: none;
             font-size: 14px;
         }
 
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
+        .remember {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 20px;
         }
 
         button {
-            width: 100%;
-            padding: 12px;
             background: black;
             color: white;
-            border: none;
-            border-radius: 20px;
             cursor: pointer;
+            border: none;
         }
 
-        .eye-icon {
+        .eye {
             position: absolute;
             right: 20px;
-            top: calc(50% + 5px);
-            transform: translateY(-50%);
+            top: calc(50% - 8px);
             cursor: pointer;
         }
 
-        .input-group {
-            position: relative;
-            width: 100%;
-        }
+        /* ---- RESPONSIVE ---- */
 
-        @media (max-width: 600px) {
-            .login-section {
-                align-items: center;
-                text-align: center;
+        @media(max-width: 768px) {
+            .container {
+                flex-direction: column;
             }
-            .login-section h2, .login-section p {
-                text-align: center;
+
+            .left-section, .right-section {
+                flex: none;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .left-section {
+                height: 300px;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+            }
+
+            .right-section {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+                padding: 20px;
+            }
+
+            .form-box {
+                width: 90%;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="login-section">
-        <h2>Welcome Back</h2>
-        <p>Manage, streamline, and thrive effortlessly.</p>
-        <input type="email" placeholder="Enter email address">
-        <div class="input-group">
-            <input type="password" placeholder="Password">
-            <span class="eye-icon">👁️</span>
+    <div class="container">
+        <div class="left-section">
+            <img src="logo.png" alt="Orderific">
+            <div class="text">
+                <h2>Service Panel</h2>
+                <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+            </div>
         </div>
-        <button>Sign In</button>
+
+        <div class="right-section">
+            <div class="form-box">
+                <h1>Welcome Back</h1>
+                <p class="subtext">Manage, streamline, and thrive effortlessly.</p>
+                <input type="email" placeholder="Enter email address">
+                <div style="position: relative;">
+                    <input type="password" placeholder="Password">
+                    <span class="eye">👁️</span>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Login with Code</a>
+                </div>
+                <button>Sign In</button>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
