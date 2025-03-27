@@ -30,6 +30,103 @@
 
             <button type="submit">Sign In</button>
         </form>
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f5f5f5; /* light grey */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: transparent;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    width: 100%;
+    outline: none;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+}
+
+.eye {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+button {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+@media(max-width: 600px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
+
     </div>
 </body>
 
