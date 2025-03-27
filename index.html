@@ -5,119 +5,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orderific Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body, html {
-            height: 100%;
-            width: 100%;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body, html { width: 100%; height: 100%; }
 
         .container {
             display: flex;
             height: 100vh;
+            width: 100%;
         }
 
-        .left {
+        .left-section {
             flex: 1;
-            background: url('otpconf.jpeg') no-repeat center;
-            background-size: cover;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
+            background: url("otpconf.jpg") no-repeat center/cover;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
         }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.3);
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
+        .left-section img {
+            width: 120px;
         }
 
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .service-text {
-            position: absolute;
-            bottom: 30px;
-            left: 20px;
+        .left-section .text {
             color: white;
         }
 
-        .service-text h1 {
-            font-size: 28px;
+        .left-section h2 {
+            font-size: 30px;
+            font-weight: 700;
             margin-bottom: 10px;
         }
 
-        .service-text p {
+        .left-section p {
             font-size: 14px;
-            max-width: 80%;
+            line-height: 1.4;
+            opacity: 0.9;
         }
 
-        .right {
+        .right-section {
             flex: 1;
+            background: #f8f4f3;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #fafafa;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
+            flex-direction: column;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
         }
 
-        .login-box {
+        .form-box {
             width: 80%;
-            max-width: 300px;
+            max-width: 320px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
             text-align: center;
         }
 
-        .login-box h2 {
-            margin-bottom: 10px;
+        .subtext {
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .login-box input, .login-box button {
+        input, button {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 20px;
+            padding: 12px;
+            margin: 8px 0;
             border: 1px solid #ccc;
+            border-radius: 50px;
+            outline: none;
+            font-size: 14px;
         }
 
-        .login-box button {
+        .remember {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        button {
             background: black;
             color: white;
+            cursor: pointer;
             border: none;
         }
 
-        @media (max-width: 768px) {
+        .eye {
+            position: absolute;
+            right: 20px;
+            top: calc(50% - 8px);
+            cursor: pointer;
+        }
+
+        /* ---- RESPONSIVE ---- */
+
+        @media(max-width: 768px) {
             .container {
                 flex-direction: column;
             }
-            .left, .right {
+
+            .left-section, .right-section {
                 flex: none;
                 width: 100%;
-                height: 50vh;
                 border-radius: 0;
             }
-            .overlay {
-                border-radius: 0;
+
+            .left-section {
+                height: 300px;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
             }
-            .service-text {
-                bottom: 15px;
+
+            .right-section {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+                padding: 20px;
+            }
+
+            .form-box {
+                width: 90%;
             }
         }
     </style>
@@ -125,21 +145,27 @@
 
 <body>
     <div class="container">
-        <div class="left">
-            <div class="overlay"></div>
-            <div class="logo">Orderific</div>
-            <div class="service-text">
-                <h1>Service Panel</h1>
-                <p>Streamline your restaurant operations with EMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+        <div class="left-section">
+            <img src="logo.png" alt="Orderific">
+            <div class="text">
+                <h2>Service Panel</h2>
+                <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
             </div>
         </div>
 
-        <div class="right">
-            <div class="login-box">
-                <h2>Welcome Back</h2>
-                <p>Manage, streamline, and thrive effortlessly.</p>
+        <div class="right-section">
+            <div class="form-box">
+                <h1>Welcome Back</h1>
+                <p class="subtext">Manage, streamline, and thrive effortlessly.</p>
                 <input type="email" placeholder="Enter email address">
-                <input type="password" placeholder="Password">
+                <div style="position: relative;">
+                    <input type="password" placeholder="Password">
+                    <span class="eye">👁️</span>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Login with Code</a>
+                </div>
                 <button>Sign In</button>
             </div>
         </div>
