@@ -1,31 +1,43 @@
-export default function SeatSelection() {
-  const seats = [
-    ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4"],
-    ["B5", "B6", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "D1"],
-  ];
+import React, { useState } from 'react';
 
-  const unavailableSeats = new Set(["A1", "A2", "A3", "B5"]);
-  const availableSeats = new Set(["B6", "C1", "C2", "C3", "C5", "C6", "C7"]);
+export default function SeatSelection() {
+  const rows = ['A', 'B', 'C', 'D', 'E'];
+  const cols = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  const unavailableSeats = new Set(['A1', 'A2', 'B5', 'C7']);
+  const [selectedSeats, setSelectedSeats] = useState(new Set());
+
+  const toggleSeatSelection = (seat) => {
+    const newSelectedSeats = new Set(selectedSeats);
+    if (newSelectedSeats.has(seat)) {
+      newSelectedSeats.delete(seat);
+    } else {
+      newSelectedSeats.add(seat);
+    }
+    setSelectedSeats(newSelectedSeats);
+  };
 
   return (
-    <div className="flex flex-col items-center bg-gray-100 p-4 rounded-lg shadow-md w-fit">
-      {seats.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex space-x-2 mb-2">
-          {row.map((seat) => (
-            <div
-              key={seat}
-              className={`w-12 h-8 flex items-center justify-center text-sm font-semibold bg-white rounded-lg border-2 shadow-md 
-                ${
-                  unavailableSeats.has(seat)
-                    ? "border-red-500 text-gray-500 bg-red-100"
-                    : availableSeats.has(seat)
-                    ? "border-green-500 text-black bg-green-100"
-                    : "border-gray-300"
-                }`}
-            >
-              {seat}
-            </div>
-          ))}
+    <div className="p-4 bg-gray-100 rounded-lg w-fit mx-auto shadow-md">
+      {rows.map((row) => (
+        <div key={row} className="flex gap-2 mb-2">
+          {cols.map((col) => {
+            const seat = `${row}${col}`;
+            const isUnavailable = unavailableSeats.has(seat);
+            const isSelected = selectedSeats.has(seat);
+            return (
+              <div
+                key={seat}
+                className={`w-12 h-12 flex items-center justify-center text-sm font-semibold rounded-lg border-2 cursor-pointer
+                  ${isUnavailable ? 'bg-red-500 text-white cursor-not-allowed' : ''}
+                  ${isSelected ? 'bg-green-500 text-white' : 'bg-gray-200'}
+                `}
+                onClick={() => !isUnavailable && toggleSeatSelection(seat)}
+              >
+                {seat}
+              </div>
+            );
+          })}
         </div>
       ))}
     </div>
