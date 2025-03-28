@@ -1,112 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Task 5</title>
+  <style>
+    .card {
+      width: 300px;
+      padding: 20px; /* Padding inside the card */
+      margin: 20px auto; /* Margin around the card */
+      border: 2px solid #ccc; /* Border for the card */
+      border-radius: 8px; /* Rounded corners */
+      background-color: #fff; /* White background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for card effect */
+    }
+    .card h3 {
+      margin: 0 0 10px 0; /* Add some space below the header */
+      font-size: 24px;
+    }
+    .card p {
+      font-size: 16px;
+      color: #555; /* Slightly darker text color */
+    }
+  </style>
 </head>
 <body>
 
-<!-- Task 1: Simple title and heading -->
-<h1>Lucas Webpage</h1>
-
-<!-- Task 2: Multiple headings -->
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-<h4>This is Heading 4</h4>
-<h5>This is Heading 5</h5>
-<h6>This is Heading 6</h6>
-
-<!-- Task 3: Paragraph with a hyperlink -->
-<p>This is a paragraph with a <a href="https://www.gmail.com" target="_blank">Gmail</a> inside it.</p>
-
-<!-- Task 4: Image with alt text -->
-<img src="https://m.media-amazon.com/images/I/71V3jec+jgL._AC_SX300_SY300_.jpg"San Diego, California" title="San Diego, California">
-
-
-<!-- Task 5: Multiple sections using div -->
-<div id="The_Beach_1">
-    <h2>The Beach 1</h2>
-    <p>The Town 1.</p>
-</div>
-
-<div id="The_Beach_2">
-    <h2>The Beach 2</h2>
-    <p>The Town 2.</p>
-</div>
-
-<!-- Task 6: Navigation bar -->
-<nav>
-    <ul>
-        <li><a href="#The_Beach_1">Beach 1</a></li>
-        <li><a href="#The_Beach_2">Beach 2</a></li>
-    </ul>
-</nav>
-
-
-<!-- Task 7: Simple profile page -->
-<h2>Profile</h2>
-<img src="https://i5.walmartimages.com/seo/EastSmooth-Coastal-Beach-Picture-Wall-Art-Beach-Theme-Window-Canvas-Art-Prints-Seascape-Artwork-Small-Size-for-Bathroom_b301548e-41f5-4f76-a301-575b3c41232c.978b321820ce37a5e8a323df629d795b.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF">
-<p>This is a simple profile paragraph.</p>
-
-<!-- Task 8: External link opening in new tab -->
-<a href="https://www.google.com" target="_blank">Google</a>
-
-<!-- Task 9: Comment inside HTML -->
-<!-- This is the main section of the webpage -->
-
-<!-- Task 10: Formatting text -->
-<p>This is a <b>bold</b> text, <i>italic</i> text, and <u>underlined</u> text.</p>
-
-<!-- Task 11: Line breaks and horizontal rules -->
-<p>Text above the horizontal rule.</p>
-<hr>
-<p>Text below the horizontal rule.</p>
-
-<!-- Task 12: Emphasis using strong and em -->
-<p>This is <strong>strong</strong> and <em>emphasized</em> text.</p>
-
-<!-- Task 13: Nested elements inside a div -->
-<div>
-    <h3>Nested Elements</h3>
-    <p>This paragraph is inside a div container.</p>
-</div>
-
-<!-- Task 14: Button linking to a section -->
-<button onclick="document.getElementById('The_Beach_2').scrollIntoView();">Go to Section 2</button>
-
-<!-- Task 15: Ordered and unordered list -->
-<h2>Favorite Books</h2>
-<ol>
-    <li>Book 1</li>
-    <li>Book 2</li>
-    <li>Book 3</li>
-</ol>
-
-<ul>
-    <li>Book A</li>
-    <li>Book B</li>
-    <li>Book C</li>
-</ul>
-
-<!-- Task 16: Email link -->
-<a href="mailto:yourname@live.com">Email Me</a>
-
-<!-- Task 17: Basic structure for a blog post -->
-<h2>Blog Post Title</h2>
-<p>This is the content of the blog post.</p>
-
-<!-- Task 18: Test different heading sizes -->
-<h1>This is Heading 1</h1>
-<h2>This is Heading 2</h2>
-<h3>This is Heading 3</h3>
-
-<!-- Task 19: Blockquote -->
-<blockquote>
-    "This is a quoted text."
-    <footer>- Author</footer>
-</blockquote>
+  <div class="card">
+    <h3>Card Title</h3>
+    <p>This is a simple card component with padding, margin, and a border.</p>
+  </div>
 
 </body>
 </html>
