@@ -1,175 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orderific Login</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-        body, html { width: 100%; height: 100%; }
-
-        .container {
-            display: flex;
-            height: 100vh;
-            width: 100%;
-        }
-
-        .left-section {
-            flex: 1;
-            background: url("otpconf.jpg") no-repeat center/cover;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 30px;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-        }
-
-        .left-section img {
-            width: 120px;
-        }
-
-        .left-section .text {
-            color: white;
-        }
-
-        .left-section h2 {
-            font-size: 30px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .left-section p {
-            font-size: 14px;
-            line-height: 1.4;
-            opacity: 0.9;
-        }
-
-        .right-section {
-            flex: 1;
-            background: #f8f4f3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-        }
-
-        .form-box {
-            width: 80%;
-            max-width: 320px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
-        .subtext {
-            font-size: 12px;
-            color: #777;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        input, button {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 50px;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .remember {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 12px;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background: black;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-
-        .eye {
-            position: absolute;
-            right: 20px;
-            top: calc(50% - 8px);
-            cursor: pointer;
-        }
-
-        /* ---- RESPONSIVE ---- */
-
-        @media(max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .left-section, .right-section {
-                flex: none;
-                width: 100%;
-                border-radius: 0;
-            }
-
-            .left-section {
-                height: 300px;
-                border-bottom-left-radius: 0;
-                border-top-right-radius: 15px;
-                border-top-left-radius: 15px;
-            }
-
-            .right-section {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 15px;
-                border-bottom-left-radius: 15px;
-                padding: 20px;
-            }
-
-            .form-box {
-                width: 90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Task 1</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: red; /* Red border */
+    }
+    .box-two {
+      width: 200px;
+      height: 200px;
+      border-width: 10px;
+      border-style: dashed;
+      border-color: blue; /* Blue dashed border */
+    }
+    .box-three {
+      width: 200px;
+      height: 200px;
+      border-width: 15px;
+      border-style: dotted;
+      border-color: green; /* Green dotted border */
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="left-section">
-            <img src="logo.png" alt="Orderific">
-            <div class="text">
-                <h2>Service Panel</h2>
-                <p>Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
-            </div>
-        </div>
 
-        <div class="right-section">
-            <div class="form-box">
-                <h1>Welcome Back</h1>
-                <p class="subtext">Manage, streamline, and thrive effortlessly.</p>
-                <input type="email" placeholder="Enter email address">
-                <div style="position: relative;">
-                    <input type="password" placeholder="Password">
-                    <span class="eye">👁️</span>
-                </div>
-                <div class="remember">
-                    <label><input type="checkbox"> Remember me</label>
-                    <a href="#">Login with Code</a>
-                </div>
-                <button>Sign In</button>
-            </div>
-        </div>
-    </div>
+  <div class="box"></div>
+  <div class="box-two"></div>
+  <div class="box-three"></div>
+
 </body>
-
 </html>
