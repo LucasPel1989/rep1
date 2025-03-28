@@ -1,45 +1,57 @@
-import React, { useState } from 'react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
 
-export default function SeatSelection() {
-  const rows = ['A', 'B', 'C', 'D', 'E'];
-  const cols = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    <div id="seat-container" class="p-6 bg-white shadow-md rounded-lg"></div>
 
-  const unavailableSeats = new Set(['A1', 'A2', 'B5', 'C7']);
-  const [selectedSeats, setSelectedSeats] = useState(new Set());
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const seats = [
+                ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4"],
+                ["B5", "B6", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "D1"]
+            ];
+            const unavailableSeats = new Set(["A1", "A2", "A3", "B5"]);
+            const selectedSeats = new Set();
 
-  const toggleSeatSelection = (seat) => {
-    const newSelectedSeats = new Set(selectedSeats);
-    if (newSelectedSeats.has(seat)) {
-      newSelectedSeats.delete(seat);
-    } else {
-      newSelectedSeats.add(seat);
-    }
-    setSelectedSeats(newSelectedSeats);
-  };
+            function renderSeats() {
+                const container = document.getElementById("seat-container");
+                container.innerHTML = "";
+                seats.forEach(row => {
+                    const rowDiv = document.createElement("div");
+                    rowDiv.className = "flex gap-2 mb-2";
+                    row.forEach(seat => {
+                        const button = document.createElement("button");
+                        button.textContent = seat;
+                        button.className = `w-12 h-12 flex items-center justify-center text-sm font-semibold rounded-lg border-2 transition 
+                            ${unavailableSeats.has(seat) ? "bg-red-500 text-white cursor-not-allowed" : ""}
+                            ${selectedSeats.has(seat) ? "bg-green-500 text-white" : "bg-gray-200 hover:bg-gray-300"}
+                        `;
+                        if (!unavailableSeats.has(seat)) {
+                            button.addEventListener("click", () => toggleSeatSelection(seat));
+                        }
+                        rowDiv.appendChild(button);
+                    });
+                    container.appendChild(rowDiv);
+                });
+            }
 
-  return (
-    <div className="p-4 bg-gray-100 rounded-lg w-fit mx-auto shadow-md">
-      {rows.map((row) => (
-        <div key={row} className="flex gap-2 mb-2">
-          {cols.map((col) => {
-            const seat = `${row}${col}`;
-            const isUnavailable = unavailableSeats.has(seat);
-            const isSelected = selectedSeats.has(seat);
-            return (
-              <div
-                key={seat}
-                className={`w-12 h-12 flex items-center justify-center text-sm font-semibold rounded-lg border-2 cursor-pointer
-                  ${isUnavailable ? 'bg-red-500 text-white cursor-not-allowed' : ''}
-                  ${isSelected ? 'bg-green-500 text-white' : 'bg-gray-200'}
-                `}
-                onClick={() => !isUnavailable && toggleSeatSelection(seat)}
-              >
-                {seat}
-              </div>
-            );
-          })}
-        </div>
-      ))}
-    </div>
-  );
-}
+            function toggleSeatSelection(seat) {
+                if (selectedSeats.has(seat)) {
+                    selectedSeats.delete(seat);
+                } else {
+                    selectedSeats.add(seat);
+                }
+                renderSeats();
+            }
+
+            renderSeats();
+        });
+    </script>
+</body>
+</html>
