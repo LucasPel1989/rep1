@@ -1,5 +1,5 @@
 export default function SeatSelection() {
-  const seatRows = [
+  const seats = [
     ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4"],
     ["B5", "B6", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "D1"],
   ];
@@ -9,17 +9,17 @@ export default function SeatSelection() {
 
   return (
     <div className="flex flex-col items-center bg-gray-100 p-4 rounded-lg shadow-md w-fit">
-      {seatRows.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex gap-2 mb-2">
+      {seats.map((row, rowIndex) => (
+        <div key={rowIndex} className="flex space-x-2 mb-2">
           {row.map((seat) => (
             <div
               key={seat}
-              className={`w-12 h-8 flex items-center justify-center text-sm font-semibold bg-white rounded-lg border-2 shadow 
+              className={`w-12 h-8 flex items-center justify-center text-sm font-semibold bg-white rounded-lg border-2 shadow-md 
                 ${
                   unavailableSeats.has(seat)
-                    ? "border-red-500 text-gray-500"
+                    ? "border-red-500 text-gray-500 bg-red-100"
                     : availableSeats.has(seat)
-                    ? "border-green-500 text-black"
+                    ? "border-green-500 text-black bg-green-100"
                     : "border-gray-300"
                 }`}
             >
