@@ -6,57 +6,40 @@
     <title>McDonald's Order Status</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen p-4">
-
-    <div class="bg-white shadow-lg rounded-lg w-full max-w-4xl p-6">
-        <!-- Header -->
+<body class="bg-gray-100 flex items-center justify-center h-screen p-4">
+    <div class="bg-white shadow-lg rounded-lg w-full max-w-4xl p-4">
         <div class="flex justify-between items-center mb-4">
             <div class="flex items-center space-x-2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/McDonalds_Golden_Arches.svg" alt="McDonald's Logo" class="w-8 h-8">
-                <h1 class="text-lg font-semibold">McDonald's</h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/McDonald's_logo.svg" class="w-10" alt="McDonald's">
+                <span class="text-lg font-bold">McDonald's</span>
             </div>
-            <span id="current-time" class="text-lg font-bold">00:00</span>
+            <span class="text-lg font-semibold">15:03</span>
         </div>
-
-        <!-- Order Status Sections -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Preparing Section -->
-            <div class="bg-gray-50 p-4 rounded-lg shadow-md">
-                <h2 class="text-xl font-bold text-center mb-4">Preparing</h2>
-                <div class="grid grid-cols-3 gap-2">
-                    <!-- Orders in Preparing Section -->
-                    <script>
-                        for(let i=0; i<15; i++) {
-                            document.write(`<div class="bg-gray-200 p-3 text-center font-semibold rounded-lg shadow">${3885}</div>`);
-                        }
-                    </script>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-200 p-4 rounded-lg">
+                <h2 class="text-center font-bold text-lg mb-2">Preparing</h2>
+                <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
+                    <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-center">3885</span>
                 </div>
             </div>
-
-            <!-- Ready Section -->
-            <div class="bg-gray-50 p-4 rounded-lg shadow-md">
-                <h2 class="text-xl font-bold text-center mb-4">Ready</h2>
-                <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                    <div class="bg-green-600 text-white p-3 text-center font-semibold rounded-lg shadow-lg text-lg">3885</div>
-                    <script>
-                        for(let i=0; i<14; i++) {
-                            document.write(`<div class="bg-green-400 p-3 text-center font-semibold rounded-lg shadow">${3885}</div>`);
-                        }
-                    </script>
+            <div class="bg-white p-4 rounded-lg border border-gray-300">
+                <h2 class="text-center font-bold text-lg mb-2">Ready</h2>
+                <div class="grid grid-cols-3 md:grid-cols-4 gap-2">
+                    <span class="bg-green-500 text-white px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-green-400 text-white px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-green-400 text-white px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-green-400 text-white px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-green-400 text-white px-4 py-2 rounded-lg text-center">3885</span>
+                    <span class="bg-green-400 text-white px-4 py-2 rounded-lg text-center">3885</span>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        function updateTime() {
-            const now = new Date();
-            document.getElementById("current-time").textContent =
-                now.getHours().toString().padStart(2, "0") + ":" +
-                now.getMinutes().toString().padStart(2, "0");
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
-    </script>
 </body>
 </html>
