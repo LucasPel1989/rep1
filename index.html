@@ -6,42 +6,45 @@
     <title>McDonald's Order Status</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-red-100 flex h-screen overflow-hidden">
+<body class="bg-[#fdeae1] flex h-screen overflow-hidden">
     <!-- Sidebar -->
-    <div class="bg-red-200 w-16 flex flex-col items-center py-4 space-y-4 sticky left-0 top-0 h-screen">
-        <button class="bg-white p-2 rounded-lg shadow-md">
+    <div class="bg-[#fb6d3a] w-16 flex flex-col items-center py-6 space-y-6 sticky left-0 top-0 h-screen rounded-r-3xl shadow-lg">
+        <button class="bg-black p-3 rounded-full shadow-md">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" class="w-6 h-6" alt="Home">
         </button>
-        <button class="bg-black p-2 rounded-lg shadow-md">
+        <button class="bg-black p-3 rounded-full shadow-md">
             <img src="https://cdn-icons-png.flaticon.com/512/61/61456.png" class="w-6 h-6" alt="Menu">
         </button>
-        <button class="bg-red-500 p-2 rounded-lg shadow-md">
+        <button class="bg-white p-3 rounded-full shadow-md">
             <img src="https://cdn-icons-png.flaticon.com/512/60/60793.png" class="w-6 h-6" alt="Orders">
         </button>
-        <button class="bg-white p-2 rounded-lg shadow-md mt-auto">
-            <img src="https://cdn-icons-png.flaticon.com/512/64/64572.png" class="w-8 h-8 rounded-full" alt="Profile">
+        <button class="mt-auto bg-white p-3 rounded-full shadow-md">
+            <img src="https://cdn-icons-png.flaticon.com/512/64/64572.png" class="w-10 h-10 rounded-full" alt="Profile">
         </button>
     </div>
     
     <!-- Main Content -->
     <div class="flex-1 flex flex-col overflow-auto">
         <!-- Header -->
-        <div class="bg-white flex justify-between items-center px-6 py-4 shadow-md sticky top-0 z-10">
+        <div class="bg-white flex justify-between items-center px-6 py-4 shadow-md sticky top-0 z-10 rounded-b-3xl">
             <h1 class="font-bold text-lg">Order Status</h1>
             <button class="bg-gray-200 px-3 py-1 rounded-lg">Fullscreen</button>
         </div>
         
         <div class="p-6">
             <!-- McDonald's Logo -->
-            <div class="bg-white p-4 rounded-lg shadow-md mb-4">
-                <img src="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-logo.png" class="w-20" alt="McDonald's">
+            <div class="bg-white p-4 rounded-lg shadow-md mb-4 flex items-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/McDonald%27s_logo.svg/1024px-McDonald%27s_logo.svg.png" class="w-16" alt="McDonald's">
+                <span class="font-bold text-lg ml-4">McDonald's</span>
             </div>
             
             <!-- Orders Grid -->
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
                     <h2 class="text-center font-bold text-lg mb-3">Preparing</h2>
-                    <div class="grid grid-cols-3 gap-3">
+                    <div class="grid grid-cols-4 gap-4">
+                        <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
+                        <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
@@ -50,12 +53,15 @@
                         <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                     </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg border border-gray-300 shadow-md">
+                <div class="bg-white p-6 rounded-lg border border-gray-300 shadow-md">
                     <h2 class="text-center font-bold text-lg mb-3">Ready</h2>
-                    <div class="grid grid-cols-3 gap-3">
+                    <div class="grid grid-cols-3 gap-4">
+                        <span class="bg-green-600 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
+                        <span class="bg-green-400 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
+                        <span class="bg-green-400 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-green-400 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-green-400 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
                         <span class="bg-green-400 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
