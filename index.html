@@ -6,16 +6,16 @@
     <title>McDonald's Order Status</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#fdeae1] flex h-screen overflow-hidden">
+<body class="bg-[#fdeae1] h-screen flex">
     <!-- Sidebar -->
-    <div class="bg-[#fb6d3a] w-16 flex flex-col items-center py-6 space-y-6 sticky left-0 top-0 h-screen rounded-r-3xl shadow-lg">
-        <button class="bg-black p-3 rounded-full shadow-md">
+    <div class="bg-black w-16 flex flex-col items-center py-6 space-y-6 fixed left-0 top-0 h-full rounded-r-3xl shadow-lg z-20">
+        <button class="bg-[#fb6d3a] p-3 rounded-full shadow-md">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" class="w-6 h-6" alt="Home">
         </button>
-        <button class="bg-black p-3 rounded-full shadow-md">
+        <button class="bg-gray-700 p-3 rounded-full shadow-md">
             <img src="https://cdn-icons-png.flaticon.com/512/61/61456.png" class="w-6 h-6" alt="Menu">
         </button>
-        <button class="bg-white p-3 rounded-full shadow-md">
+        <button class="bg-gray-700 p-3 rounded-full shadow-md">
             <img src="https://cdn-icons-png.flaticon.com/512/60/60793.png" class="w-6 h-6" alt="Orders">
         </button>
         <button class="mt-auto bg-white p-3 rounded-full shadow-md">
@@ -24,14 +24,14 @@
     </div>
     
     <!-- Main Content -->
-    <div class="flex-1 flex flex-col overflow-auto">
+    <div class="flex-1 flex flex-col ml-16">
         <!-- Header -->
-        <div class="bg-white flex justify-between items-center px-6 py-4 shadow-md sticky top-0 z-10 rounded-b-3xl">
+        <div class="bg-white flex justify-between items-center px-6 py-4 shadow-md fixed top-0 w-full left-16 z-10 rounded-b-3xl">
             <h1 class="font-bold text-lg">Order Status</h1>
             <button class="bg-gray-200 px-3 py-1 rounded-lg">Fullscreen</button>
         </div>
         
-        <div class="p-6">
+        <div class="p-6 mt-16">
             <!-- McDonald's Logo -->
             <div class="bg-white p-4 rounded-lg shadow-md mb-4 flex items-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/McDonald%27s_logo.svg/1024px-McDonald%27s_logo.svg.png" class="w-16" alt="McDonald's">
