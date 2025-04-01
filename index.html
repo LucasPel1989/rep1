@@ -3,54 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McDonald's Order Status</title>
+    <title>Order Status</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-[#fdeae1] to-white h-screen flex justify-center items-center p-4">
-    <div class="bg-white shadow-lg rounded-xl w-full max-w-4xl p-6">
-        <!-- Header -->
-        <div class="flex justify-between items-center pb-4 border-b border-gray-200">
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-4 w-full max-w-4xl">
+        <div class="flex justify-between items-center border-b pb-2">
             <div class="flex items-center space-x-2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/McDonald%27s_logo.svg/1024px-McDonald%27s_logo.svg.png" class="w-10" alt="McDonald's">
-                <span class="font-bold">McDonald's</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/McDonald%27s_Golden_Arches.svg" alt="McDonald's" class="w-10 h-10">
+                <span class="font-bold text-lg">McDonald's</span>
             </div>
-            <span class="text-gray-700 font-semibold">15:03</span>
+            <span class="font-bold text-xl">15:03</span>
         </div>
         
-        <!-- Orders Grid -->
-        <div class="grid grid-cols-2 gap-6 mt-4">
-            <!-- Preparing Section -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                <h2 class="text-center font-bold text-lg mb-3">Preparing</h2>
-                <div class="grid grid-cols-4 gap-4">
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-gray-300 text-gray-800 px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
+        <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="bg-gray-200 p-4 rounded-lg">
+                <h2 class="font-bold text-center mb-2">Preparing</h2>
+                <div class="grid grid-cols-6 gap-2">
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
+                    <div class="bg-gray-300 p-2 rounded text-center">3885</div>
                 </div>
             </div>
             
-            <!-- Ready Section -->
-            <div class="bg-white p-6 rounded-lg border border-gray-300 shadow-md">
-                <h2 class="text-center font-bold text-lg mb-3">Ready</h2>
-                <div class="grid grid-cols-3 gap-4">
-                    <span class="bg-green-600 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
-                    <span class="bg-green-500 text-white px-6 py-3 rounded-lg text-center font-semibold shadow">3885</span>
+            <div class="bg-white p-4 rounded-lg border">
+                <h2 class="font-bold text-center mb-2">Ready</h2>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="bg-green-700 text-white p-4 rounded text-center col-span-3">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
+                    <div class="bg-green-700 text-white p-2 rounded text-center">3885</div>
                 </div>
             </div>
         </div>
